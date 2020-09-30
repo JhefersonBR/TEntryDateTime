@@ -189,15 +189,19 @@ class TEntryDateTime extends TEntry implements AdiantiWidgetInterface{
         {
             TScript::create("
                 $(document).ready(function(){
+
+                    
                     if (typeof tentrydatetime_start === 'undefined') {
                         $.ajax({
                             url: \"vendor/jheferson-br/t-entry-date-time/src/TEntryDateTime.js\",
                             dataType: \"script\",
-                            success: tentrydatetime_start
+                            success: function(){
+                                tentrydatetime_start( '#{$this->id}', '{$this->mask}', '{$language}', '{$outer_size}', '{$options}');
+                            }
                         });
                     }
 
-                    tentrydatetime_start( '#{$this->id}', '{$this->mask}', '{$language}', '{$outer_size}', '{$options}');
+                     
                 });
             ");
             

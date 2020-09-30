@@ -1,0 +1,21 @@
+{
+    "name": "jheferson-br/t-entry-date-time",
+    "description": "Componente Adianti Framework",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jheferson Fonseca",
+            "email": "play_jheferson@hotmail.com"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.2"
+    },
+    "minimum-stability": "dev"
+}

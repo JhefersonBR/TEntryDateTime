@@ -1,8 +1,6 @@
 function tentrydatetime_start(id, mask, language, size, options) {
     $(id).wrap('<div class="tdate-group tdatetimepicker input-append date">');
-    $(id).after(
-      '<span class="add-on btn btn-default tdate-group-addon"><i class="far fa-clock icon-th"></i></span>'
-    );
+    
   
     atributes = {
       lang: language,
@@ -33,9 +31,15 @@ function tentrydatetime_start(id, mask, language, size, options) {
       if(options.time){
           $(id)
           .datetimepicker(options);
+          $(id).after(
+            '<span class="add-on btn btn-default tdate-group-addon"><i class="far fa-clock icon-th"></i></span>'
+          );
       }else{
           $(id)
           .datepicker(options);
+          $(id).after(
+            '<span class="add-on btn btn-default tdate-group-addon"><i class="far fa-calendar icon-th"></i></span>'
+          );
       }
     
       

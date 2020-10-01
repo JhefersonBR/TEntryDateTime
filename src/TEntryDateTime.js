@@ -32,13 +32,13 @@ function tentrydatetime_start(id, mask, language, size, options) {
           $(id)
           .datetimepicker(options);
           $(id).after(
-            '<span class="add-on btn btn-default tdate-group-addon"><i class="far fa-clock icon-th"></i></span>'
+            '<span class="tdate-group-addon"><i class="far fa-clock icon-th"></i></span>'
           );
       }else{
           $(id)
           .datepicker(options);
           $(id).after(
-            '<span class="add-on btn btn-default tdate-group-addon"><i class="far fa-calendar icon-th"></i></span>'
+            '<span class="tdate-group-addon"><i class="far fa-calendar icon-th"></i></span>'
           );
       }
     

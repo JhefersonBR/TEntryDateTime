@@ -3,7 +3,7 @@ function tentrydatetime_start(id, mask, language, size, options) {
     
   
     atributes = {
-      lang: language,
+      language: language == "pt" ? "pt-BR" : "es",
       weekStart: 0,
       format: mask,
       switchOnClick: true,

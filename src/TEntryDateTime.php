@@ -207,4 +207,36 @@ class TEntryDateTime extends TEntry implements AdiantiWidgetInterface{
             
         }
     }
+
+    /**
+     * Shortcut to convert a date to format yyyy-mm-dd
+     * @param $date = date in format dd/mm/yyyy
+     */
+    public static function date2us($date)
+    {
+        if ($date)
+        {
+            // get the date parts
+            $day  = substr($date,0,2);
+            $mon  = substr($date,3,2);
+            $year = substr($date,6,4);
+            return "{$year}-{$mon}-{$day}";
+        }
+    }
+    
+    /**
+     * Shortcut to convert a date to format dd/mm/yyyy
+     * @param $date = date in format yyyy-mm-dd
+     */
+    public static function date2br($date)
+    {
+        if ($date)
+        {
+            // get the date parts
+            $year = substr($date,0,4);
+            $mon  = substr($date,5,2);
+            $day  = substr($date,8,2);
+            return "{$day}/{$mon}/{$year}";
+        }
+    }
 }

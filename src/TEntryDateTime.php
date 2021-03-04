@@ -205,6 +205,8 @@ class TEntryDateTime extends TEntry implements AdiantiWidgetInterface{
                 });
             ");
             
+        }else{
+            TScript::create( " tdate_disable_field( '{$this->formName}', '{$this->name}' ); " );
         }
     }
 
